@@ -1,3 +1,1 @@
-# python-100-days
-# python-100-days
-This project will have 30 days of Python learning
+This project will have 100 days of Python Learning files
