@@ -44,17 +44,12 @@ def save_data():
         messagebox.showwarning(
             title="Oops", message="Fields can't be empty !!!")
     else:
-        # Standard Dialogue , create confirmation pop-up to save/cancel
-        is_ok = messagebox.askokcancel(
-            title="Confirmation", message="Are you sure you want to save this ?")
+        with open(file_name, "a+") as data_file:
+            data_file.write(data)
 
-        if is_ok:
-            with open(file_name, "a+") as data_file:
-                data_file.write(data)
-
-            # Now clear/delete the entries from the GUI
-            website_entry.delete(0, END)
-            password_entry.delete(0, END)
+        # Now clear/delete the entries from the GUI
+        website_entry.delete(0, END)
+        password_entry.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
